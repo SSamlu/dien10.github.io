@@ -42,12 +42,15 @@
                         <div class="form-row ">
                             <div class="Name">Vị trí</div>
                             <div class="value">
-                                <div class="input-group selected-box">
-                                    <select class="input-style" name="position" id="position" required>
-                                        <option value=""disabled selected>Junior Ecommerce Web Developer</option>
-                                        <option value="junior">junior....</option>
-                                        <option value="senior">senior....</option>
-                                    </select>
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select class="form-select" name="position" id="position" required>
+                                            <option value=""disabled="disabled" selected="selected">Junior Ecommerce Web Developer</option>
+                                            <option value="junior">junior....</option>
+                                            <option value="senior">senior....</option>
+                                            <div class="select-dropdown"></div>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +60,9 @@
                                 <div class="input-group">
                                     <textarea class="input-style" name="experience" id="experience" required></textarea>
                                 </div>
-                                <input class="image" type="file" name="image" id="photo" accept="image/*" required>
+                               
+                                    <input class="image" type="file" name="image" id="photo" accept="image/*" required>
+                                
                             </div>
                         </div>
                         
