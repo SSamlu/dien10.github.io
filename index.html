@@ -7,9 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/3.3.1/jquery.validate.min.js"></script>
     <link href="style.css" rel="stylesheet" media="all">
 </head>
@@ -17,17 +15,19 @@
     <div class="page-wrapper">
         <div class="wrapper wrapper-from">
             <div class="card card-5">
+                <div class="card-x"></div>
+                <div class="card-logo"></div>
                 <div class="card-heading">
-                    <h2>Hãy gởi CV cho chúng tôi</h2>
+                    <h4>Hãy gởi CV của bạn cho chúng tôi</h4>
                 </div>
                 <hr class="wrapper-hr">
                 <div class="card-form">
-                    <form id="form" action="https://freemind-test.netlify.app/.netlify/functions/test" method="post" onsubmit="return validation()" name ="vform">
+                    <form id="form" >
                         <div class="form-row ">
                             <div class="Name">Tên của bạn</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input type="text" class="input-style" id="fullname" name="fullname"placeholder="Ví dụ: Nguyễn Văn A" required>
+                                    <input type="text" class="input-style" id="fullname" pattern="^[a-zA-Z]+[\-'\s]?[a-zA-Z ]+$" minlength="3" name="fullname"placeholder="Ví dụ: Nguyễn Văn A" required>
                                 </div>
                             </div>
                         </div>
@@ -42,8 +42,12 @@
                         <div class="form-row ">
                             <div class="Name">Vị trí</div>
                             <div class="value">
-                                <div class="input-group">
-                                    <input type="text" class="input-style" id="vt" name="vt"required>
+                                <div class="input-group selected-box">
+                                    <select class="input-style" name="position" id="position" required>
+                                        <option value=""disabled selected>Junior Ecommerce Web Developer</option>
+                                        <option value="junior">junior....</option>
+                                        <option value="senior">senior....</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -51,11 +55,9 @@
                             <div class="Name">Kinh nghiệm làm việc</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <textarea class="input-style" name="job" id="" required>
-
-                                    </textarea>
+                                    <textarea class="input-style" name="experience" id="experience" required></textarea>
                                 </div>
-                                <input class="image" type="file" name="" id="photo" accept="image/*" required>
+                                <input class="image" type="file" name="image" id="photo" accept="image/*" required>
                             </div>
                         </div>
                         
@@ -63,15 +65,14 @@
                             <div class="Name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input type="email" class="input-style" id="email" name="email" placeholder="Ex: example@gmail.com" required>
+                                    <input type="email" class="input-style" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Ex: example@gmail.com" required>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="form-row">
                             <div class="button">
-                                <!-- <button class="submit btn btn-primary" id="submit" type="submit" style="width:400px;padding:10px 0">Gửi CV cho Freemind</button> -->
-                                <input class="submit btn btn-primary" type="submit" value="Gửi CV cho Freemind" style="width:400px;padding:10px 0">
+                                <input class="submit btn " type="submit" value="Gửi CV cho Freemind" style="width:400px;padding:10px 0">
                             </div>
                         </div>
                     </form>
@@ -79,9 +80,6 @@
             </div>
         </div>
     </div>
-    
     <script src="global.js"></script>
-    <script src="">
-    </script>
 </body>
 </html>

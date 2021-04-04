@@ -1,7 +1,31 @@
+.wrapper{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 .wrapper-from{padding-top: 10px;}
+.card-logo{
+  width: 323px;
+  height: 84px;
+  margin:10px auto;
+  background-image: url('logo.png');
+}
+.card-x{
+  background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yX/r/sjwIelw3nbI.png');
+  background-position: 0px -527px;
+  background-size: auto;
+  width: 20px;
+  height: 20px;
+  /*background-repeat: no-repeat;
+  display: inline-block; */
+  margin: 12px 12px;
+  margin-left:650px;
+  cursor: pointer;
+  
+}
 .card-heading{
-  padding:10px 157px;
-
+  padding:10px 117px;  
+}
+h4{
+  font-weight:bold;
 }
 .wrapper-hr{
   border: solid black;
@@ -18,7 +42,6 @@
   }
   .card-5 {
     background: #fafafa;
-    /* background: #fff; */
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -48,9 +71,10 @@
   }
   
 .input-style {
-  background: #ffff;
+  background: #FFFFFF;
   line-height: 50px;
-  border:0px ;
+
+  border:1px solid #eaecee ;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -58,4 +82,21 @@
   font-size: 15px;
   color: rgb(85, 85, 85);
   width: 429px;
+}
+#position{
+  height: 50px;
+}
+.submit{
+  background: rgba(29, 172, 203, 0.68);
+  border-radius: 3px;
+  border: 0px;
+  color: white;
+  font-size: 20px;
+}
+.selected-box{
+  /* border: 0px ; */
+}
+.selected-box select {
+  padding: 10px 15px;
+
 }
