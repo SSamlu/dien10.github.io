@@ -1,8 +1,18 @@
 $(document).ready(function(){
     console.log("dien");
+    $("#form").validate(
+
+    );
     $('.submit').on('click',function(e){
         e.preventDefault();
         console.log("dien");
+        // if(name==""||phone==""||photo==""||email==""){
+        //   alert("nhập thông tin cồn thiếu");
+        // }
+      validation = ()=>{
+          console.log("okk");
+      }
+      
         var formdata={
             name : $('#fullname').val(),
             phone : $('#phone').val(),
@@ -18,11 +28,12 @@ $(document).ready(function(){
               // encode:true,
               success: function (result){
                 // $('#hienthi').html('result');
-                alert(result);
+                // alert(result);
             }
             })
     })
 })
+
 // var xhr = new XMLHttpRequest();
 // console.log(xhr);
 // xhr.open("post","https://freemind-test.netlify.app/.netlify/functions/test",true);
